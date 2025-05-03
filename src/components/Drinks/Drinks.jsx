@@ -3,7 +3,7 @@ import './Drinks.css'
 
 
 
-export const Drinks = ({ name, image, layers, id }) => (
+export const Drinks = ({ name, image, layers, id, ordered}) => (
 
     <div className="drink">
         <div className="drink__product">
@@ -21,11 +21,9 @@ export const Drinks = ({ name, image, layers, id }) => (
             </div>
         </div>
 
-        <form className="drink__controls">
+        <form data-id={id} className="drink__controls">
             <input type="hidden" className="order-id" value={id} />
-            <button className="order-btn">
-                Objednat
-            </button>
+            <button className={ordered ? "order-btn--ordered order-btn" : "order-btn"}>{ordered ? "Zrušit": "Objednat"}</button>
         </form>
     </div>
 )

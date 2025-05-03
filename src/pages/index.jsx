@@ -39,8 +39,35 @@ button.addEventListener('click', hamburgerMenu);
 
 const menuNames = document.querySelectorAll('.rollout-nav a')
 menuNames.forEach((a) => {
-  a.addEventListener('click', hamburgerMenu )
+  a.addEventListener('click', hamburgerMenu)
 });
 
 //navElm.addEventListener('click, () => {
- // navElm.classList.add('nav-closed')})
+// navElm.classList.add('nav-closed')})
+
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  console.log(event.target.dataset.id)
+  const id = event.target.dataset.id
+  await fetch(`http://localhost:4000/api/drinks/${id}`,
+    {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'PATCH',
+      body: JSON.stringify(
+      [{
+          op: 'replace',
+          path: '/ordered',
+          value: true
+        }]
+      ),
+    }
+  );
+  window.location.reload();
+}
+
+const forms = document.querySelectorAll('.drink__controls')
+forms.forEach((form) => {
+  form.addEventListener('submit', handleSubmit)
+})

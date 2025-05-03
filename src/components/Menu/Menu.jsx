@@ -22,6 +22,7 @@ export const Menu = () => (
             ordered={drink.ordered}
             image={drink.image}
             layers={drink.layers}
+            id={drink.id}
           />
         )}
       </div>
