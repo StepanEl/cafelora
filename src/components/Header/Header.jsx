@@ -18,4 +18,3 @@ export const Header = () => (
         </div>
     </header>)
 
-    //{`/detail.html?id=${id}`}

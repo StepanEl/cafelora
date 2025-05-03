@@ -8,6 +8,9 @@ import { Gallery } from '../components/Gallery/Gallery';
 import { Contact } from '../components/Contact/Contact';
 import { Footer } from '../components/Footer/Footer';
 
+
+
+
 document.querySelector('#root').innerHTML = render(
   <div className="page" id="home">
     <Header />
@@ -39,4 +42,5 @@ menuNames.forEach((a) => {
   a.addEventListener('click', hamburgerMenu )
 });
 
-//() => {  navElm.classList.toggle('nav-closed');}
+//navElm.addEventListener('click, () => {
+ // navElm.classList.add('nav-closed')})
