@@ -13,7 +13,8 @@ import { Footer } from '../components/Footer/Footer';
 
 document.querySelector('#root').innerHTML = render(
   <div className="page" id="home">
-    <Header />
+    <Header 
+    showMenu={true}/>
 
     <main>
       <Banner />
