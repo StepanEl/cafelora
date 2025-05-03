@@ -8,12 +8,14 @@ export const Header = () => (
             <div className="navigation">
                 <button className="nav-btn"></button>
                 <nav className="rollout-nav nav-closed">
-                    <a href="#home">domů</a>
-                    <a href="#menu">menu</a>
-                    <a href="#gallery">galerie</a>
-                    <a href="#contact">kontakt</a>
+                    <a href={`/index.html?id=#home`}>domů</a>
+                    <a href={`/index.html?id=#menu`}>menu</a>
+                    <a href={`/index.html?id=#gallery`}>galerie</a>
+                    <a href={`/index.html?id=#contact`}>kontakt</a>
                 </nav>
             </div>
 
         </div>
     </header>)
+
+    //{`/detail.html?id=${id}`}
